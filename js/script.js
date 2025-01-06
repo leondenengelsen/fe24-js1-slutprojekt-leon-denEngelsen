@@ -16,8 +16,8 @@ const searchBtn = document.getElementById("searchBtn");
 const searchResultsContainer = document.getElementById("searchResultsContainer");
 const searchMovieContainer = document.getElementById("searchMovieContainer");
 const searchInputActor = document.getElementById("searchInputactor");
-const searchBtnActor = document.getElementById("searchBtnActor"); // Updated to match new ID
-const searchActorContainer = document.getElementById("searchActorContainer"); // Use existing div from HTML
+const searchBtnActor = document.getElementById("searchBtnActor"); 
+const searchActorContainer = document.getElementById("searchActorContainer"); 
 
 //--------------------------------------------------------------------------------------------//
 
