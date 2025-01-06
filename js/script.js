@@ -37,8 +37,8 @@ homeButton.addEventListener("click", () => {
 //--------------------------------------------------------------------------------------------//
 
 highestRatingBtn.addEventListener("click", () => {
-  searchMovieContainer.innerHTML = ""; // Clear the specific movie container
-  searchActorContainer.innerHTML = ""; // Clear the specific actor container
+  searchMovieContainer.innerHTML = ""; 
+  searchActorContainer.innerHTML = "";
 
   fetch('https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1', options)
     .then((res) => res.json())
@@ -63,7 +63,6 @@ highestRatingBtn.addEventListener("click", () => {
             <p><strong>Release Date:</strong> ${movie.release_date}</p>
           </div>
         `; 
-        // personal note for Leon: toFixed is used to get the number of decimals behind the comma wanted. 
 
         top10Container.appendChild(movieDiv);
       });
