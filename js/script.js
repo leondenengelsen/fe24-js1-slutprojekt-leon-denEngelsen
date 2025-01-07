@@ -24,15 +24,11 @@ const searchActorContainer = document.getElementById("searchActorContainer");
 homeButton.addEventListener("click", () => {
   top10Container.classList.add("top10ContainerHidden");
   searchResultsContainer.classList.add("searchResultsContainerHidden");
-  homeButton.addEventListener("click", () => {
-    top10Container.classList.add("top10ContainerHidden");
-    searchResultsContainer.classList.add("searchResultsContainerHidden");
-    homeScreenContainer.classList.remove("homeScreenHidden");
+  homeScreenContainer.classList.remove("homeScreenHidden");
 
     displayRandomTopTVSeries();
     displayRandomTopMovies();
   });
-});
 
 //--------------------------------------------------------------------------------------------//
 
@@ -205,8 +201,6 @@ searchBtnActor.addEventListener("click", (event) => {
     top10Container.classList.add("top10ContainerHidden");
     searchInputActor.value = ""; 
     homeScreenContainer.classList.add("homeScreenHidden");
-
-//personal note Leon: the part below ChatGPT helped me set this up.
 
     fetch(`https://api.themoviedb.org/3/search/person?query=${encodeURIComponent(query)}&language=en-US&page=1`, options)
       .then((res) => res.json())
